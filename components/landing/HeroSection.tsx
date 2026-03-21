@@ -29,8 +29,7 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
               visitas en clientes
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-[#9CA3AF] leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
-              Diseño premium, velocidad optimizada y enfoque total en resultados. 
-              Tu negocio merece una landing que genere clientes desde el primer día. 
+              Te ayudo a transformar visitas en clientes con una landing profesional hecha a medida.  
             </p>
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
