@@ -29,8 +29,8 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
               visitas en clientes
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-[#9CA3AF] leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
-              Diseñamos landing pages profesionales para clínicas y PYMES. 
-              Modernas, rápidas y optimizadas para maximizar tus conversiones.
+              Diseño profesional, entrega rápida y optimización real para que 
+              tu negocio reciba más solicitudes desde el primer día. 
             </p>
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
