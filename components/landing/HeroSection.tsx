@@ -69,7 +69,7 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
           <div className="relative">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-[#3B82F6]/10 border border-[#1F2937]">
               <Image
-                src="/hero-mockup.jpg"
+                src="/fisio vital imagen ejemplo.png"
                 alt="Ejemplo de landing page profesional con diseño moderno"
                 width={600}
                 height={450}
