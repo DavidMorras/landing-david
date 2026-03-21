@@ -13,15 +13,15 @@ const plans = [
   {
     name: "Plan Básico",
     price: "50€",
-    delivery: "3-5 días",
+    delivery: "5 días",
     features: [
-      "Landing page de una sección",
+      "Landing de 1 página",
       "Diseño responsive",
-      "Formulario de contacto básico",
-      "Optimización SEO básica",
+      "Formulario de contacto o botón de WhatsApp",
+      "Meta title y meta description básicos",
       "1 revisión incluida",
     ],
-    forWhom: "Ideal para autónomos y profesionales que necesitan una presencia online simple y efectiva.",
+    forWhom: "Ideal para negocios que necesitan presencia rápida y funcional.",
     highlighted: false,
   },
   {
