@@ -29,7 +29,8 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
               visitas en clientes
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-[#9CA3AF] leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
-              Te ayudo a transformar visitas en clientes con una landing profesional hecha a medida.  
+              Te ayudo a transformar visitas en clientes con una landing profesional hecha a medida. 
+ 
             </p>
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -48,21 +49,18 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
             </div>
 
             {/* Stats */}
-            <div className="mt-12 grid grid-cols-3 gap-8">
-              <div>
-                <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">50+</div>
-                <div className="text-sm text-[#9CA3AF] mt-1">Proyectos</div>
-              </div>
-              <div>
-                <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">98%</div>
-                <div className="text-sm text-[#9CA3AF] mt-1">Satisfacción</div>
-              </div>
-              <div>
-                <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">+45%</div>
-                <div className="text-sm text-[#9CA3AF] mt-1">Conversión</div>
-              </div>
-            </div>
-          </div>
+            <ul className="space-y-2 text-gray-300">
+            <li>
+            <span className="text-blue-400 font-semibold">Optimización:</span> las landings bien diseñadas convierten entre un 8% y un 20% más
+            </li>
+            <li>
+            <span className="text-blue-400 font-semibold">Claridad:</span> estructura enfocada en que el usuario actúe rápido
+           </li>
+            <li>
+            <span className="text-blue-400 font-semibold">Conversión:</span> diseño pensado para generar más clientes desde el primer día
+            </li>
+            </ul>
+
 
           {/* Hero Image */}
           <div className="relative">
