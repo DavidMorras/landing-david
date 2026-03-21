@@ -38,7 +38,7 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
                 onClick={() => onNavigate("contacto")}
                 className="px-8 py-4 bg-[#3B82F6] text-white font-semibold rounded-lg hover:bg-[#60A5FA] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0F14]"
               >
-                Quiero mi landing
+                Empezar ahora
               </button>
               <button
                 onClick={() => onNavigate("planes")}
