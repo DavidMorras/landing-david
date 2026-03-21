@@ -47,20 +47,29 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
                 Ver planes y precios
               </button>
             </div>
+{/* Stats */}
+<div className="mt-12 grid grid-cols-3 gap-8">
+  <div>
+    <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">Optimización</div>
+    <div className="text-sm text-[#9CA3AF] mt-1">
+      Las landings bien diseñadas convierten entre un 8% y un 20% más
+    </div>
+  </div>
 
-            {/* Stats */}
-            <ul className="space-y-2 text-gray-300">
-            <li>
-            <span className="text-blue-400 font-semibold">Optimización:</span> las landings bien diseñadas convierten entre un 8% y un 20% más
-            </li>
-            <li>
-            <span className="text-blue-400 font-semibold">Claridad:</span> estructura enfocada en que el usuario actúe rápido
-           </li>
-            <li>
-            <span className="text-blue-400 font-semibold">Conversión:</span> diseño pensado para generar más clientes desde el primer día
-            </li>
-            </ul>
+  <div>
+    <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">Claridad</div>
+    <div className="text-sm text-[#9CA3AF] mt-1">
+      Estructura enfocada en que el usuario actúe rápido
+    </div>
+  </div>
 
+  <div>
+    <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">Conversión</div>
+    <div className="text-sm text-[#9CA3AF] mt-1">
+      Diseño pensado para generar más clientes desde el primer día
+    </div>
+  </div>
+</div>
 
           {/* Hero Image */}
           <div className="relative">
