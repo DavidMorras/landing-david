@@ -47,6 +47,7 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
                 Ver planes y precios
               </button>
             </div>
+
 {/* Stats */}
 <div className="mt-12 grid grid-cols-3 gap-8">
   <div>
