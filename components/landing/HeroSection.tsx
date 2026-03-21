@@ -21,6 +21,7 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
           {/* Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#E5E7EB] leading-tight text-balance">
@@ -28,9 +29,9 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
               <span className="text-[#3B82F6]">convierten</span>{" "}
               visitas en clientes
             </h1>
+
             <p className="mt-6 text-lg sm:text-xl text-[#9CA3AF] leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
-              Te ayudo a transformar visitas en clientes con una landing profesional hecha a medida. 
- 
+              Te ayudo a transformar visitas en clientes con una landing profesional hecha a medida.
             </p>
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -40,6 +41,7 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
               >
                 Empezar ahora
               </button>
+
               <button
                 onClick={() => onNavigate("planes")}
                 className="px-8 py-4 bg-transparent text-[#E5E7EB] font-semibold rounded-lg border border-[#1F2937] hover:border-[#3B82F6] hover:text-[#3B82F6] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0F14]"
@@ -48,29 +50,30 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
               </button>
             </div>
 
-{/* Stats */}
-<div className="mt-12 grid grid-cols-3 gap-8">
-  <div>
-    <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">Optimización</div>
-    <div className="text-sm text-[#9CA3AF] mt-1">
-      Las landings bien diseñadas convierten entre un 8% y un 20% más
-    </div>
-  </div>
+            {/* Stats */}
+            <div className="mt-12 grid grid-cols-3 gap-8">
+              <div>
+                <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">Optimización</div>
+                <div className="text-sm text-[#9CA3AF] mt-1">
+                  Las landings bien diseñadas convierten entre un 8% y un 20% más
+                </div>
+              </div>
 
-  <div>
-    <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">Claridad</div>
-    <div className="text-sm text-[#9CA3AF] mt-1">
-      Estructura enfocada en que el usuario actúe rápido
-    </div>
-  </div>
+              <div>
+                <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">Claridad</div>
+                <div className="text-sm text-[#9CA3AF] mt-1">
+                  Estructura enfocada en que el usuario actúe rápido
+                </div>
+              </div>
 
-  <div>
-    <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">Conversión</div>
-    <div className="text-sm text-[#9CA3AF] mt-1">
-      Diseño pensado para generar más clientes desde el primer día
-    </div>
-  </div>
-</div>
+              <div>
+                <div className="text-2xl sm:text-3xl font-bold text-[#3B82F6]">Conversión</div>
+                <div className="text-sm text-[#9CA3AF] mt-1">
+                  Diseño pensado para generar más clientes desde el primer día
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Hero Image */}
           <div className="relative">
@@ -84,10 +87,12 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
                 priority
               />
             </div>
+
             {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 w-72 h-72 bg-[#3B82F6]/20 rounded-full blur-3xl" />
             <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-[#60A5FA]/10 rounded-full blur-3xl" />
           </div>
+
         </div>
       </div>
     </section>
