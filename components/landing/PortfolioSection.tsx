@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: "Clínica Dental Sonríe",
     description: "Landing page completa para clínica dental con sistema de citas online, galería de tratamientos y testimonios de pacientes. Diseño premium con animaciones suaves.",
-    image: "/portfolio/clinica-dental.jpg",
+    image: "/",
     results: [
       { icon: TrendingUp, label: "Aumento de citas", value: "+45%" },
       { icon: Users, label: "Nuevos pacientes", value: "+120/mes" },
@@ -21,7 +21,7 @@ const projects = [
     id: 2,
     title: "Fisioterapia Avanza",
     description: "Página profesional para centro de fisioterapia con información de servicios, equipo médico y formulario de contacto avanzado con selección de especialidad.",
-    image: "/portfolio/fisioterapia.jpg",
+    image: "/portfoliousandofisiovital.png",
     results: [
       { icon: TrendingUp, label: "Conversión web", value: "+62%" },
       { icon: Users, label: "Consultas online", value: "+85/mes" },
