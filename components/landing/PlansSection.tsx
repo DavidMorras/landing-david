@@ -83,7 +83,7 @@ const PlansSection = forwardRef<HTMLElement, PlansSectionProps>(({ onNavigate },
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#E5E7EB] text-balance">
-            Planes de <span className="text-[#3B82F6]">Landing Pages</span>
+            Planes diseñados para hacer <span className="text-[#3B82F6]">Crecer tu negocio</span>
           </h2>
           <p className="mt-4 text-lg text-[#9CA3AF] max-w-2xl mx-auto text-pretty">
             Elige el plan que mejor se adapte a tu negocio. En todos tendrás 
