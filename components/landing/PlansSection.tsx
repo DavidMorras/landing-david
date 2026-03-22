@@ -70,8 +70,8 @@ const PlansSection = forwardRef<HTMLElement, PlansSectionProps>(({ onNavigate },
             Planes de <span className="text-[#3B82F6]">Landing Pages</span>
           </h2>
           <p className="mt-4 text-lg text-[#9CA3AF] max-w-2xl mx-auto text-pretty">
-            Elige el plan que mejor se adapte a las necesidades de tu negocio. 
-            Todos incluyen diseño profesional y soporte.
+            Elige el plan que mejor se adapte a tu negocio. En todos tendrás 
+            diseño profesional y acompañamiento durante todo el proceso. 
           </p>
         </div>
 
