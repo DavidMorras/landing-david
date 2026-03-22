@@ -137,10 +137,13 @@ const PlansSection = forwardRef<HTMLElement, PlansSectionProps>(({ onNavigate },
                   </li>
                 ))}
               </ul>
-
-              <div className="mb-8 p-4 bg-[#0B0F14] rounded-lg">
-                <p className="text-sm text-[#9CA3AF] font-medium mb-1">¿Para quién es?</p>
-                <p className="text-sm text-[#E5E7EB]">{plan.forWhom}</p>
+               <div className="mb-8 p-5 rounded-xl bg-[#0B0F14]/60 border border-[#1F2937] shadow-inner shadow-black/10">
+               <p className="text-xs font-semibold tracking-wide text-[#3B82F6] uppercase mb-2">
+               ¿Para quién es?
+               </p>
+               <p className="text-sm text-[#E5E7EB] leading-relaxed">
+               {plan.forWhom}
+               </p>
               </div>
 
               <button
