@@ -46,9 +46,11 @@ const plans = [
     features: [
       "Todo lo del plan estandar",
       "Sistema de reservas online integrado",
-      "Copywriting orientado a conversión (titular, subtítulo, CTAs)",
+      "Copywriting completo orientado a conversión",
       "Optimización de velocidad",
       "Instalación y configuración de Google Analytics",
+      "Configuración de eventos de conversión (clics, formularios, WhatsApp)",
+      "3 revisiones incluidas",
       "2 meses de soporte prioritario",
     ],
     forWhom: " clínicas y negocios que quieren delegar y convertir más.",
