@@ -30,7 +30,7 @@ const plans = [
     delivery: "7 días",
     features: [
       "Todo lo del plan basico",
-      "SEO on‑page básico (títulos, descripciones, headings)",
+      "SEO on‑page básico",
       "Optimización móvil avanzada",
       "Integración con Google Maps o Calendly",
       "Integración con redes sociales",
