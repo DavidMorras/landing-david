@@ -25,7 +25,7 @@ const maintenancePlans = [
     monthlyPrice: "20€",
     yearlyPrice: "200€",
     features: [
-      "Todo lo del mantenimiento Basico"
+      "Todo lo del mantenimiento Basico",
       "Hosting incluido",
       "Cambios pequeños mensuales",
       "Soporte por email",
@@ -40,7 +40,7 @@ const maintenancePlans = [
     monthlyPrice: "40€",
     yearlyPrice: "400€",
     features: [
-      "Todo lo del mantenimiento Estándar"
+      "Todo lo del mantenimiento Estándar",
       "Hosting incluido",
       "Cambios ilimitados razonables",
       "Soporte prioritario",
