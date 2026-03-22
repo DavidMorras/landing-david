@@ -3,7 +3,14 @@
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 
-type Section = "inicio" | "planes" | "mantenimiento" | "resenas" | "portafolio" | "contacto"
+type Section =
+  | "inicio"
+  | "porquetrabajarconmigo"
+  | "planes"
+  | "mantenimiento"
+  | "resenas"
+  | "portafolio"
+  | "contacto"
 
 interface HeaderProps {
   activeTab: Section
@@ -12,6 +19,7 @@ interface HeaderProps {
 
 const navItems: { id: Section; label: string }[] = [
   { id: "inicio", label: "Inicio" },
+  { id: "porquetrabajarconmigo", label: "Por qué yo" },
   { id: "planes", label: "Planes" },
   { id: "mantenimiento", label: "Mantenimiento" },
   { id: "resenas", label: "Reseñas" },
@@ -52,11 +60,17 @@ export default function Header({ activeTab, onNavigate }: HeaderProps) {
             <div className="w-8 h-8 bg-[#3B82F6] rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">L</span>
             </div>
-            <span className="text-[#E5E7EB] font-semibold text-lg hidden sm:block">LandingsPro</span>
+            <span className="text-[#E5E7EB] font-semibold text-lg hidden sm:block">
+              LandingsPro
+            </span>
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1" role="navigation" aria-label="Navegación principal">
+          <nav
+            className="hidden lg:flex items-center gap-1"
+            role="navigation"
+            aria-label="Navegación principal"
+          >
             {navItems.map((item) => (
               <button
                 key={item.id}

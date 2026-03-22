@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react"
 import Header from "@/components/landing/Header"
 import HeroSection from "@/components/landing/HeroSection"
+import PorQueTrabajarConmigo from "@/components/landing/PorQueTrabajarConmigo"
 import PlansSection from "@/components/landing/PlansSection"
 import MaintenanceSection from "@/components/landing/MaintenanceSection"
 import ReviewsSection from "@/components/landing/ReviewsSection"
@@ -10,7 +11,14 @@ import PortfolioSection from "@/components/landing/PortfolioSection"
 import ContactSection from "@/components/landing/ContactSection"
 import Footer from "@/components/landing/Footer"
 
-type Section = "inicio" | "planes" | "mantenimiento" | "resenas" | "portafolio" | "contacto"
+type Section =
+  | "inicio"
+  | "porquetrabajarconmigo"
+  | "planes"
+  | "mantenimiento"
+  | "resenas"
+  | "portafolio"
+  | "contacto"
 
 // Easing function for smooth scroll
 function easeInOutCubic(t: number): number {
@@ -40,9 +48,10 @@ function smoothScrollTo(targetY: number, duration: number = 800) {
 
 export default function LandingPage() {
   const [activeTab, setActiveTab] = useState<Section>("inicio")
-  
+
   // Refs for each section
   const inicioRef = useRef<HTMLElement>(null)
+  const porquetrabajarconmigoRef = useRef<HTMLElement>(null)
   const planesRef = useRef<HTMLElement>(null)
   const mantenimientoRef = useRef<HTMLElement>(null)
   const resenasRef = useRef<HTMLElement>(null)
@@ -51,6 +60,7 @@ export default function LandingPage() {
 
   const sectionRefs: Record<Section, React.RefObject<HTMLElement | null>> = {
     inicio: inicioRef,
+    porquetrabajarconmigo: porquetrabajarconmigoRef,
     planes: planesRef,
     mantenimiento: mantenimientoRef,
     resenas: resenasRef,
@@ -71,8 +81,16 @@ export default function LandingPage() {
 
   // IntersectionObserver to update activeTab based on visible section
   useEffect(() => {
-    const sections: Section[] = ["inicio", "planes", "mantenimiento", "resenas", "portafolio", "contacto"]
-    
+    const sections: Section[] = [
+      "inicio",
+      "porquetrabajarconmigo",
+      "planes",
+      "mantenimiento",
+      "resenas",
+      "portafolio",
+      "contacto",
+    ]
+
     const observerOptions = {
       root: null,
       rootMargin: "-20% 0px -60% 0px",
@@ -105,14 +123,15 @@ export default function LandingPage() {
   return (
     <main className="min-h-screen bg-[#0B0F14]">
       <Header activeTab={activeTab} onNavigate={navigateToSection} />
-      
+
       <HeroSection ref={inicioRef} onNavigate={navigateToSection} />
+      <PorQueTrabajarConmigo ref={porquetrabajarconmigoRef} />
       <PlansSection ref={planesRef} onNavigate={navigateToSection} />
       <MaintenanceSection ref={mantenimientoRef} onNavigate={navigateToSection} />
       <ReviewsSection ref={resenasRef} />
       <PortfolioSection ref={portafolioRef} />
       <ContactSection ref={contactoRef} />
-      
+
       <Footer onNavigate={navigateToSection} />
     </main>
   )
