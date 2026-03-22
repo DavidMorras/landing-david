@@ -20,6 +20,8 @@ const maintenancePlans = [
       { text: "Seguridad básica", included: true },
       { text: "Copias de seguridad automáticas", included: true },
       { text: "Monitorización de uptime", included: true },
+
+      // X del Básico (máximo 3)
       { text: "No incluye cambios de contenido", included: false },
       { text: "No incluye cambios de diseño", included: false },
       { text: "No incluye soporte (solo incidencias críticas)", included: false },
@@ -36,6 +38,8 @@ const maintenancePlans = [
       { text: "Optimización ligera", included: true },
       { text: "Soporte por email", included: true },
       { text: "Revisión técnica mensual", included: true },
+
+      // X estratégicas (solo 2)
       { text: "No incluye cambios ilimitados", included: false },
       { text: "No incluye optimización avanzada de velocidad", included: false },
     ],
@@ -79,10 +83,8 @@ const MaintenanceSection = forwardRef<HTMLElement, MaintenanceSectionProps>(({ o
 
         {/* Toggle */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex items-center gap-4 p-1 bg-[#1F2937] rounded-lg" role="radiogroup" aria-label="Seleccionar periodo de facturación">
+          <div className="inline-flex items-center gap-4 p-1 bg-[#1F2937] rounded-lg">
             <button
-              role="radio"
-              aria-checked={!isYearly}
               onClick={() => setIsYearly(false)}
               className={`px-6 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                 !isYearly ? "bg-[#3B82F6] text-white" : "text-[#9CA3AF] hover:text-[#E5E7EB]"
@@ -91,8 +93,6 @@ const MaintenanceSection = forwardRef<HTMLElement, MaintenanceSectionProps>(({ o
               Mensual
             </button>
             <button
-              role="radio"
-              aria-checked={isYearly}
               onClick={() => setIsYearly(true)}
               className={`px-6 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                 isYearly ? "bg-[#3B82F6] text-white" : "text-[#9CA3AF] hover:text-[#E5E7EB]"
@@ -167,7 +167,7 @@ const MaintenanceSection = forwardRef<HTMLElement, MaintenanceSectionProps>(({ o
               </div>
               <div>
                 <h3 className="text-xl font-bold text-[#E5E7EB]">Hosting Gestionado</h3>
-                <p className="mt-2 text-[#9CA3AF] max-w-xl text-pretty">
+                <p className="mt-2 text-[#9CA3AF] max-w-xl">
                   Nos encargamos de todo: servidor, dominio, SSL, CDN y rendimiento optimizado. 
                   Sin preocupaciones técnicas.
                 </p>
