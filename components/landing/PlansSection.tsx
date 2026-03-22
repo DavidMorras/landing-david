@@ -27,7 +27,7 @@ const plans = [
       { text: "No incluye animaciones avanzadas", included: false },
       { text: "No incluye copywriting profesional", included: false },
     ],
-    forWhom: "Ideal para negocios que necesitan presencia rápida y funcional.",
+    forWhom: "Ideal para proyectos nuevos, pequeños negocios o personas que quieren una web rápida sin complicaciones.",
     highlighted: false,
   },
   {
@@ -48,7 +48,7 @@ const plans = [
       { text: "No incluye animaciones avanzadas", included: false },
       { text: "No incluye cambios ilimitados", included: false },
     ],
-    forWhom: "Perfecto para negocios que buscan visibilidad y más conversiones.",
+    forWhom: "Ideal si quieres una web más completa, con varias secciones y un enfoque más profesional.",
   },
   {
     name: "Plan Premium",
@@ -66,7 +66,7 @@ const plans = [
       { text: "1 mes de mantenimiento premium incluido", included: true },
       { text: "SEO básico incluido", included: true },
     ],
-    forWhom: "Para negocios que quieren delegar todo y maximizar conversiones.",
+    forWhom: "Ideal para negocios que necesitan una web potente, gestionada de principio a fin y enfocada en conversiones.",
     highlighted: false,
   },
 ]
