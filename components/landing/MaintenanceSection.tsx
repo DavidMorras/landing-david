@@ -158,53 +158,60 @@ const MaintenanceSection = forwardRef<HTMLElement, MaintenanceSectionProps>(({ o
           ))}
         </div>
 
-        {/* Hosting Card */}
-        <article className="bg-[#111827] rounded-2xl p-8 border-2 border-[#3B82F6] shadow-lg shadow-[#3B82F6]/10">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-[#3B82F6]/10 rounded-xl">
-                <Server className="w-8 h-8 text-[#3B82F6]" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#E5E7EB]">Hosting Gestionado</h3>
-                <p className="mt-2 text-[#9CA3AF] max-w-xl">
-                  Nos encargamos de todo: servidor, dominio, SSL, CDN y rendimiento optimizado. 
-                  Sin preocupaciones técnicas.
-                </p>
-                <ul className="mt-4 flex flex-wrap gap-4">
-                  <li className="flex items-center gap-2 text-sm text-[#E5E7EB]">
-                    <Check className="w-4 h-4 text-[#3B82F6]" />
-                    SSL incluido
-                  </li>
-                  <li className="flex items-center gap-2 text-sm text-[#E5E7EB]">
-                    <Check className="w-4 h-4 text-[#3B82F6]" />
-                    CDN global
-                  </li>
-                  <li className="flex items-center gap-2 text-sm text-[#E5E7EB]">
-                    <Check className="w-4 h-4 text-[#3B82F6]" />
-                    99.9% uptime
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="text-center md:text-right">
-              <div className="flex items-baseline gap-1 justify-center md:justify-end">
-                <span className="text-3xl font-bold text-[#3B82F6]">+10€</span>
-                <span className="text-[#9CA3AF]">/mes</span>
-              </div>
-              <button
-                onClick={() => onNavigate("contacto")}
-                className="mt-4 px-8 py-3 bg-[#3B82F6] text-white font-semibold rounded-lg hover:bg-[#60A5FA] transition-colors duration-200"
-              >
-                Añadir hosting
-              </button>
-            </div>
-          </div>
-        </article>
+{/* Hosting Card */}
+<article className="bg-[#111827] rounded-2xl p-8 border-2 border-[#3B82F6] shadow-lg shadow-[#3B82F6]/10">
+  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <div className="flex items-start gap-4">
+      <div className="p-3 bg-[#3B82F6]/10 rounded-xl">
+        <Server className="w-8 h-8 text-[#3B82F6]" />
       </div>
-    </section>
-  )
-})
+      <div>
+        <h3 className="text-xl font-bold text-[#E5E7EB]">Hosting Gestionado</h3>
+        <p className="mt-2 text-[#9CA3AF] max-w-xl">
+          Nos encargamos de todo para que no tengas que preocuparte de nada. 
+          Tu web estará siempre rápida, segura y funcionando sin complicaciones técnicas.
+        </p>
+
+        <ul className="mt-4 flex flex-wrap gap-4">
+          <li className="flex items-center gap-2 text-sm text-[#E5E7EB]">
+            <Check className="w-4 h-4 text-[#3B82F6]" />
+            SSL incluido
+          </li>
+          <li className="flex items-center gap-2 text-sm text-[#E5E7EB]">
+            <Check className="w-4 h-4 text-[#3B82F6]" />
+            CDN global
+          </li>
+          <li className="flex items-center gap-2 text-sm text-[#E5E7EB]">
+            <Check className="w-4 h-4 text-[#3B82F6]" />
+            99.9% uptime
+          </li>
+          <li className="flex items-center gap-2 text-sm text-[#E5E7EB]">
+            <Check className="w-4 h-4 text-[#3B82F6]" />
+            Servidor optimizado para landings rápidas
+          </li>
+          <li className="flex items-center gap-2 text-sm text-[#E5E7EB]">
+            <Check className="w-4 h-4 text-[#3B82F6]" />
+            Monitorización continua
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="text-center md:text-right">
+      <div className="flex items-baseline gap-1 justify-center md:justify-end">
+        <span className="text-3xl font-bold text-[#3B82F6]">+10€</span>
+        <span className="text-[#9CA3AF]">/mes</span>
+      </div>
+      <button
+        onClick={() => onNavigate("contacto")}
+        className="mt-4 px-8 py-3 bg-[#3B82F6] text-white font-semibold rounded-lg hover:bg-[#60A5FA] transition-colors duration-200"
+      >
+        Añadir hosting
+      </button>
+    </div>
+  </div>
+</article>
+
 
 MaintenanceSection.displayName = "MaintenanceSection"
 
