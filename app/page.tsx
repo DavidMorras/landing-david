@@ -5,6 +5,7 @@ import Header from "@/components/landing/Header"
 import HeroSection from "@/components/landing/HeroSection"
 import PorQueTrabajarConmigo from "@/components/landing/PorQueTrabajarConmigo"
 import PlansSection from "@/components/landing/PlansSection"
+import MiProcesoDeTrabajo from "@/components/landing/miprocesodetrabajo"
 import MaintenanceSection from "@/components/landing/MaintenanceSection"
 import ReviewsSection from "@/components/landing/ReviewsSection"
 import PortfolioSection from "@/components/landing/PortfolioSection"
@@ -15,6 +16,7 @@ type Section =
   | "inicio"
   | "porquetrabajarconmigo"
   | "planes"
+  | "proceso"
   | "mantenimiento"
   | "resenas"
   | "portafolio"
@@ -53,6 +55,7 @@ export default function LandingPage() {
   const inicioRef = useRef<HTMLElement>(null)
   const porquetrabajarconmigoRef = useRef<HTMLElement>(null)
   const planesRef = useRef<HTMLElement>(null)
+  const procesoRef = useRef<HTMLElement>(null)
   const mantenimientoRef = useRef<HTMLElement>(null)
   const resenasRef = useRef<HTMLElement>(null)
   const portafolioRef = useRef<HTMLElement>(null)
@@ -62,6 +65,7 @@ export default function LandingPage() {
     inicio: inicioRef,
     porquetrabajarconmigo: porquetrabajarconmigoRef,
     planes: planesRef,
+    proceso: procesoRef,
     mantenimiento: mantenimientoRef,
     resenas: resenasRef,
     portafolio: portafolioRef,
@@ -85,6 +89,7 @@ export default function LandingPage() {
       "inicio",
       "porquetrabajarconmigo",
       "planes",
+      "proceso",
       "mantenimiento",
       "resenas",
       "portafolio",
@@ -127,6 +132,10 @@ export default function LandingPage() {
       <HeroSection ref={inicioRef} onNavigate={navigateToSection} />
       <PorQueTrabajarConmigo ref={porquetrabajarconmigoRef} />
       <PlansSection ref={planesRef} onNavigate={navigateToSection} />
+
+      {/* NUEVA SECCIÓN */}
+      <MiProcesoDeTrabajo ref={procesoRef} />
+
       <MaintenanceSection ref={mantenimientoRef} onNavigate={navigateToSection} />
       <ReviewsSection ref={resenasRef} />
       <PortfolioSection ref={portafolioRef} />
