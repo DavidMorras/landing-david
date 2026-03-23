@@ -9,9 +9,9 @@ const reviews = [
     id: 1,
     name: "María García",
     role: "Directora, Clínica Dental Sonríe",
-    image: "/reviews/maria.jpg",
+    image: "/reviews/fotojorgereseña.jpeg",
     rating: 5,
-    text: "Nuestra nueva landing page ha transformado completamente nuestra presencia online. Las citas han aumentado un 45% desde que la lanzamos. El diseño es elegante y profesional, exactamente lo que buscábamos.",
+    text: "El me hizo la mejor web que hubiera imaginado, además ¡tiene un padre guapo!",
   },
   {
     id: 2,
