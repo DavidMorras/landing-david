@@ -9,7 +9,7 @@ const reviews = [
     id: 1,
     name: "Jorge Morrás",
     role: "Instructor de Seguridad",
-    image: "/public/fotojorgereseña.jpeg",
+    image: "public/fotojorgereseña.jpeg",
     rating: 5,
     text: "El me hizo la mejor web que hubiera imaginado, además ¡tiene un padre guapo!",
   },
