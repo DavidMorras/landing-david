@@ -6,8 +6,8 @@ import { Menu, X } from "lucide-react"
 type Section =
   | "inicio"
   | "porquetrabajarconmigo"
+  | "proceso"  
   | "planes"
-  | "proceso"
   | "mantenimiento"
   | "resenas"
   | "portafolio"
@@ -21,8 +21,8 @@ interface HeaderProps {
 const navItems: { id: Section; label: string }[] = [
   { id: "inicio", label: "Inicio" },
   { id: "porquetrabajarconmigo", label: "Por qué yo" },
+  { id: "proceso", label: "Proceso" },   
   { id: "planes", label: "Planes" },
-  { id: "proceso", label: "Proceso" }, // ⭐ NUEVO
   { id: "mantenimiento", label: "Mantenimiento" },
   { id: "resenas", label: "Reseñas" },
   { id: "portafolio", label: "Portafolio" },
