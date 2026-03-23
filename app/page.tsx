@@ -54,8 +54,8 @@ export default function LandingPage() {
   // Refs for each section
   const inicioRef = useRef<HTMLElement>(null)
   const porquetrabajarconmigoRef = useRef<HTMLElement>(null)
+  const procesoRef = useRef<HTMLElement>(null)  
   const planesRef = useRef<HTMLElement>(null)
-  const procesoRef = useRef<HTMLElement>(null)
   const mantenimientoRef = useRef<HTMLElement>(null)
   const resenasRef = useRef<HTMLElement>(null)
   const portafolioRef = useRef<HTMLElement>(null)
@@ -64,8 +64,8 @@ export default function LandingPage() {
   const sectionRefs: Record<Section, React.RefObject<HTMLElement | null>> = {
     inicio: inicioRef,
     porquetrabajarconmigo: porquetrabajarconmigoRef,
+    proceso: procesoRef,    
     planes: planesRef,
-    proceso: procesoRef,
     mantenimiento: mantenimientoRef,
     resenas: resenasRef,
     portafolio: portafolioRef,
@@ -88,8 +88,8 @@ export default function LandingPage() {
     const sections: Section[] = [
       "inicio",
       "porquetrabajarconmigo",
+      "proceso",      
       "planes",
-      "proceso",
       "mantenimiento",
       "resenas",
       "portafolio",
@@ -131,11 +131,8 @@ export default function LandingPage() {
 
       <HeroSection ref={inicioRef} onNavigate={navigateToSection} />
       <PorQueTrabajarConmigo ref={porquetrabajarconmigoRef} />
+      <MiProcesoDeTrabajo ref={procesoRef} />      
       <PlansSection ref={planesRef} onNavigate={navigateToSection} />
-
-      {/* NUEVA SECCIÓN */}
-      <MiProcesoDeTrabajo ref={procesoRef} />
-
       <MaintenanceSection ref={mantenimientoRef} onNavigate={navigateToSection} />
       <ReviewsSection ref={resenasRef} />
       <PortfolioSection ref={portafolioRef} />
