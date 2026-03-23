@@ -5,7 +5,7 @@ import Header from "@/components/landing/Header"
 import HeroSection from "@/components/landing/HeroSection"
 import PorQueTrabajarConmigo from "@/components/landing/PorQueTrabajarConmigo"
 import PlansSection from "@/components/landing/PlansSection"
-import MiProcesoDeTrabajo from "@/components/MiProcesoDeTrabajo"
+import MiProcesoDeTrabajo from "@/components/landing/miprocesodetrabajo"
 import MaintenanceSection from "@/components/landing/MaintenanceSection"
 import ReviewsSection from "@/components/landing/ReviewsSection"
 import PortfolioSection from "@/components/landing/PortfolioSection"
@@ -132,10 +132,7 @@ export default function LandingPage() {
       <HeroSection ref={inicioRef} onNavigate={navigateToSection} />
       <PorQueTrabajarConmigo ref={porquetrabajarconmigoRef} />
       <PlansSection ref={planesRef} onNavigate={navigateToSection} />
-
-      {/* NUEVA SECCIÓN INTEGRADA */}
       <MiProcesoDeTrabajo ref={procesoRef} />
-
       <MaintenanceSection ref={mantenimientoRef} onNavigate={navigateToSection} />
       <ReviewsSection ref={resenasRef} />
       <PortfolioSection ref={portafolioRef} />
