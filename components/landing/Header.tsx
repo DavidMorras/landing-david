@@ -7,6 +7,7 @@ type Section =
   | "inicio"
   | "porquetrabajarconmigo"
   | "planes"
+  | "proceso"
   | "mantenimiento"
   | "resenas"
   | "portafolio"
@@ -21,6 +22,7 @@ const navItems: { id: Section; label: string }[] = [
   { id: "inicio", label: "Inicio" },
   { id: "porquetrabajarconmigo", label: "Por qué yo" },
   { id: "planes", label: "Planes" },
+  { id: "proceso", label: "Proceso" }, // ⭐ NUEVO
   { id: "mantenimiento", label: "Mantenimiento" },
   { id: "resenas", label: "Reseñas" },
   { id: "portafolio", label: "Portafolio" },
