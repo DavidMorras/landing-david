@@ -17,7 +17,7 @@ const PorQueTrabajarConmigo = forwardRef<HTMLElement>((_, ref) => {
             ¿Por qué trabajar <span className="text-[#3B82F6]">conmigo?</span>
           </h2>
           <p className="mt-4 text-lg text-[#9CA3AF] max-w-2xl mx-auto">
-            Porque no solo hago webs bonitas: hago webs que funcionan.
+            Trabajo contigo de forma clara, rápida y sin complicaciones. Mi objetivo es que tengas una web que te represente y que te traiga clientes.
           </p>
         </div>
 
@@ -27,42 +27,42 @@ const PorQueTrabajarConmigo = forwardRef<HTMLElement>((_, ref) => {
           <div className="bg-[#111827] p-6 rounded-2xl border border-[#1F2937] shadow-lg shadow-black/10">
             <h3 className="text-xl font-semibold text-[#E5E7EB] mb-2">Webs rápidas y optimizadas</h3>
             <p className="text-[#9CA3AF] text-sm">
-              Tu web cargará en menos de un segundo, mejorando la experiencia y aumentando conversiones.
+              Tu web cargará en menos de un segundo y funcionará bien en cualquier dispositivo. Esto mejora la experiencia y aumenta las posibilidades de que te contacten.
             </p>
           </div>
 
           <div className="bg-[#111827] p-6 rounded-2xl border border-[#1F2937] shadow-lg shadow-black/10">
-            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-2">Diseño claro y profesional</h3>
+            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-2">Diseño que transmite confianza</h3>
             <p className="text-[#9CA3AF] text-sm">
-              Nada de webs recargadas. Todo pensado para que el cliente entienda qué ofreces en segundos.
+              Cada detalle está pensado para que tus clientes entiendan quién eres y qué ofreces desde el primer segundo, sin distracciones ni ruido visual.
             </p>
           </div>
 
           <div className="bg-[#111827] p-6 rounded-2xl border border-[#1F2937] shadow-lg shadow-black/10">
-            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-2">Comunicación directa</h3>
+            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-2">Textos que conectan</h3>
             <p className="text-[#9CA3AF] text-sm">
-              Hablas conmigo, no con una agencia. Respuestas rápidas y trato cercano.
+              Te ayudo a explicar lo que haces de forma clara, cercana y orientada a resultados. Nada de textos genéricos: mensajes que realmente funcionan.
             </p>
           </div>
 
           <div className="bg-[#111827] p-6 rounded-2xl border border-[#1F2937] shadow-lg shadow-black/10">
-            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-2">Entrega en pocos días</h3>
+            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-2">Proceso sencillo y sin estrés</h3>
             <p className="text-[#9CA3AF] text-sm">
-              Tu web lista en tiempo récord, sin esperas eternas ni procesos complicados.
+              Tú me cuentas lo que necesitas y yo me encargo del resto. Te enseño avances, hacemos ajustes y lo dejamos perfecto sin complicarte la vida.
             </p>
           </div>
 
           <div className="bg-[#111827] p-6 rounded-2xl border border-[#1F2937] shadow-lg shadow-black/10">
-            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-2">Precios transparentes</h3>
+            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-2">Optimizada para funcionar de verdad</h3>
             <p className="text-[#9CA3AF] text-sm">
-              Sin sorpresas ni costes ocultos. Sabes lo que pagas desde el primer momento.
+              Tu web estará preparada para posicionar mejor, cargar rápido y ofrecer una experiencia profesional que genere confianza desde el primer momento.
             </p>
           </div>
 
           <div className="bg-[#111827] p-6 rounded-2xl border border-[#1F2937] shadow-lg shadow-black/10">
-            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-2">Webs pensadas para convertir</h3>
+            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-2">Acompañamiento real</h3>
             <p className="text-[#9CA3AF] text-sm">
-              Cada sección está diseñada para que el usuario haga lo que tú quieres: contactarte.
+              No te dejo solo. Te explico cómo usar tu web y te doy soporte durante el primer mes. Si tienes dudas, me escribes y lo solucionamos.
             </p>
           </div>
 
