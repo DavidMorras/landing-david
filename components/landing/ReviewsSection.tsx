@@ -7,9 +7,9 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 const reviews = [
   {
     id: 1,
-    name: "María García",
-    role: "Directora, Clínica Dental Sonríe",
-    image: "/reviews/fotojorgereseña.jpeg",
+    name: "Jorge Morrás",
+    role: "Instructor de Seguridad",
+    image: "/public/fotojorgereseña.jpeg",
     rating: 5,
     text: "El me hizo la mejor web que hubiera imaginado, además ¡tiene un padre guapo!",
   },
