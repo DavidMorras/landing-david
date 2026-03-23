@@ -10,6 +10,7 @@ import ReviewsSection from "@/components/landing/ReviewsSection"
 import PortfolioSection from "@/components/landing/PortfolioSection"
 import ContactSection from "@/components/landing/ContactSection"
 import Footer from "@/components/landing/Footer"
+import MiProcesoDeTrabajo from "@/components/MiProcesoDeTrabajo"
 
 type Section =
   | "inicio"
@@ -136,3 +137,5 @@ export default function LandingPage() {
     </main>
   )
 }
+<PlansSection ref={sections.planes} onNavigate={handleNavigate} />
+<MiProcesoDeTrabajo ref={sections.proceso} />
