@@ -1,6 +1,14 @@
 "use client"
 
-type Section = "inicio" | "planes" | "mantenimiento" | "resenas" | "portafolio" | "contacto"
+type Section =
+  | "inicio"
+  | "porquetrabajarconmigo"
+  | "proceso"  
+  | "planes"
+  | "mantenimiento"
+  | "resenas"
+  | "portafolio"
+  | "contacto"
 
 interface FooterProps {
   onNavigate: (section: Section) => void
@@ -8,6 +16,8 @@ interface FooterProps {
 
 const navItems: { id: Section; label: string }[] = [
   { id: "inicio", label: "Inicio" },
+  { id: "porquetrabajarconmigo", label: "Por qué yo" }, // ⭐ AÑADIDO
+  { id: "proceso", label: "Proceso" },   
   { id: "planes", label: "Planes" },
   { id: "mantenimiento", label: "Mantenimiento" },
   { id: "resenas", label: "Reseñas" },
@@ -32,7 +42,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <span className="text-[#E5E7EB] font-semibold text-lg">LandingsPro</span>
             </button>
             <p className="mt-4 text-[#9CA3AF] text-sm leading-relaxed">
-              Creamos landing pages profesionales para clínicas y PYMES que convierten visitantes en clientes.
+              Te ayudamos a transformar visitas en clientes con una landing profesional hecha a medida.
             </p>
           </div>
 
@@ -60,13 +70,13 @@ export default function Footer({ onNavigate }: FooterProps) {
                 href="mailto:hola@landingspro.es"
                 className="block text-[#9CA3AF] hover:text-[#3B82F6] transition-colors"
               >
-                hola@landingspro.es
+                davidmorras2@gmail.com
               </a>
               <a
                 href="tel:+34600000000"
                 className="block text-[#9CA3AF] hover:text-[#3B82F6] transition-colors"
               >
-                +34 600 000 000
+                +34 680210456
               </a>
             </div>
           </div>
