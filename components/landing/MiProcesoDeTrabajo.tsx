@@ -7,37 +7,37 @@ const steps = [
   {
     title: "Cuestionario inicial",
     description:
-      "Antes de empezar, te haré unas preguntas para entender qué tipo de web quieres, qué estilo te gusta y qué elementos básicos debe incluir. Esto me permite tener una visión clara de tu proyecto desde el primer momento.",
+      "Lo primero es conocerte un poco y entender qué tipo de web quieres. Te haré algunas preguntas sencillas sobre el estilo, el contenido y las funciones básicas que necesitas. Nada complicado, solo lo necesario para tener una idea clara antes de empezar.",
     icon: ClipboardList,
   },
   {
-    title: "Primera versión de la landing",
+    title: "Creo la primera versión de tu landing",
     description:
-      "Con toda la información, diseño la estructura inicial de tu landing page: secciones, distribución y la base visual del proyecto.",
+      "Con esa información preparo la estructura inicial de tu web: cómo se verá, qué secciones tendrá y cómo estará organizada. Es una primera versión para que puedas visualizar tu proyecto.",
     icon: Layout,
   },
   {
-    title: "Edición y refinado",
+    title: "Ajusto el diseño y los detalles",
     description:
-      "Una vez creada la primera versión, ajusto colores, tipografías, imágenes y detalles visuales para que la web encaje perfectamente con tu marca.",
+      "Cuando la base está lista, empiezo a pulirla: colores, tipografías, imágenes y todo lo que hace que la web se vea profesional y acorde a tu estilo.",
     icon: Brush,
   },
   {
-    title: "Revisión contigo",
+    title: "Te la enseño y la revisamos juntos",
     description:
-      "Te muestro la web y revisamos juntos cada sección. Aquí puedes pedirme cambios, ajustes o mejoras para que todo quede exactamente como quieres.",
+      "Aquí es donde tú opinas. Te muestro la web y vemos sección por sección. Puedes pedirme cambios, ajustes o mejoras para que todo quede como tú quieres.",
     icon: Eye,
   },
   {
     title: "Revisiones finales",
     description:
-      "Aplico todas las revisiones necesarias para que la web quede pulida, profesional y alineada con tus objetivos.",
+      "Aplico todos los cambios necesarios hasta que la web esté perfecta y lista para funcionar. Mi objetivo es que quedes totalmente satisfecho.",
     icon: CheckCircle,
   },
   {
     title: "Entrega final",
     description:
-      "Cuando todo está listo, te entrego la web completamente terminada, optimizada y lista para funcionar. Además, te explico cómo usarla y te doy soporte durante el primer mes según tu plan.",
+      "Cuando todo está listo, te entrego tu web final, optimizada y funcionando. Además, te explico cómo usarla y te doy soporte durante el primer mes según el plan que elijas.",
     icon: Rocket,
   },
 ]
