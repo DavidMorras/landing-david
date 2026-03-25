@@ -299,22 +299,20 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
                 Aceptamos diferentes métodos de pago para tu comodidad.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <button
-                  onClick={() => setIsBizumOpen(true)}
+                <div
                   className="flex items-center justify-center gap-3 p-4 bg-[#0B0F14] border border-[#1F2937] rounded-xl hover:border-[#3B82F6] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
                   aria-label="Pagar con Bizum"
                 >
                   <Smartphone className="w-6 h-6 text-[#3B82F6]" />
                   <span className="text-[#E5E7EB] font-medium">Bizum</span>
-                </button>
-                <button
-                  onClick={() => setIsPayPalOpen(true)}
+                </div>
+                <div
                   className="flex items-center justify-center gap-3 p-4 bg-[#0B0F14] border border-[#1F2937] rounded-xl hover:border-[#3B82F6] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
                   aria-label="Pagar con PayPal"
                 >
                   <CreditCard className="w-6 h-6 text-[#3B82F6]" />
                   <span className="text-[#E5E7EB] font-medium">PayPal</span>
-                </button>
+                </div>
               </div>
             </div>
           </div>
