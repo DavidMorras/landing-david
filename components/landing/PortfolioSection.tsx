@@ -24,7 +24,7 @@ const PortfolioSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
-      id="portafolio"
+      id="portfolio"
       className="py-20 lg:py-32 bg-[#111827]/30 relative"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +32,7 @@ const PortfolioSection = forwardRef<HTMLElement>((_, ref) => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#E5E7EB] text-balance">
-            Nuestro <span className="text-[#3B82F6]">Portafolio</span>
+            Nuestro <span className="text-[#3B82F6]">Portfolio</span>
           </h2>
           <p className="mt-4 text-lg text-[#9CA3AF] max-w-2xl mx-auto text-pretty">
             Algunos de los proyectos reales que hemos desarrollado para nuestros clientes.

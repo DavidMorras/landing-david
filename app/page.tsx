@@ -19,7 +19,7 @@ type Section =
   | "planes" 
   | "mantenimiento"
   | "resenas"
-  | "portafolio"
+  | "portfolio"
   | "contacto"
 
 // Easing function for smooth scroll
@@ -58,7 +58,7 @@ export default function LandingPage() {
   const planesRef = useRef<HTMLElement>(null)
   const mantenimientoRef = useRef<HTMLElement>(null)
   const resenasRef = useRef<HTMLElement>(null)
-  const portafolioRef = useRef<HTMLElement>(null)
+  const portfolioRef = useRef<HTMLElement>(null)
   const contactoRef = useRef<HTMLElement>(null)
 
   const sectionRefs: Record<Section, React.RefObject<HTMLElement | null>> = {
@@ -68,7 +68,7 @@ export default function LandingPage() {
     planes: planesRef,
     mantenimiento: mantenimientoRef,
     resenas: resenasRef,
-    portafolio: portafolioRef,
+    portfolio: portfolioRef,
     contacto: contactoRef,
   }
 
@@ -92,7 +92,7 @@ export default function LandingPage() {
       "planes",
       "mantenimiento",
       "resenas",
-      "portafolio",
+      "portfolio",
       "contacto",
     ]
 
@@ -135,7 +135,7 @@ export default function LandingPage() {
       <PlansSection ref={planesRef} onNavigate={navigateToSection} />
       <MaintenanceSection ref={mantenimientoRef} onNavigate={navigateToSection} />
       <ReviewsSection ref={resenasRef} />
-      <PortfolioSection ref={portafolioRef} />
+      <PortfolioSection ref={portfolioRef} />
       <ContactSection ref={contactoRef} />
 
       <Footer onNavigate={navigateToSection} />

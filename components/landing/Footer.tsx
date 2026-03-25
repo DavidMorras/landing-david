@@ -7,7 +7,7 @@ type Section =
   | "planes"
   | "mantenimiento"
   | "resenas"
-  | "portafolio"
+  | "portfolio"
   | "contacto"
 
 interface FooterProps {
@@ -21,7 +21,7 @@ const navItems: { id: Section; label: string }[] = [
   { id: "planes", label: "Planes" },
   { id: "mantenimiento", label: "Mantenimiento" },
   { id: "resenas", label: "Reseñas" },
-  { id: "portafolio", label: "Portafolio" },
+  { id: "portfolio", label: "Portfolio" },
   { id: "contacto", label: "Contacto" },
 ]
 

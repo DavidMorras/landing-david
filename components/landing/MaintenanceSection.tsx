@@ -3,7 +3,7 @@
 import { forwardRef, useState } from "react"
 import { Check, Server } from "lucide-react"
 
-type Section = "inicio" | "planes" | "mantenimiento" | "resenas" | "portafolio" | "contacto"
+type Section = "inicio" | "planes" | "mantenimiento" | "resenas" | "portfolio" | "contacto"
 
 interface MaintenanceSectionProps {
   onNavigate: (section: Section) => void

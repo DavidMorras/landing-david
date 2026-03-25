@@ -270,22 +270,22 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
               </h3>
               <div className="space-y-4">
                 <a
-                  href="mailto:hola@landingspro.es"
+                  href="davidmorras2@gmail.com"
                   className="flex items-center gap-4 text-[#9CA3AF] hover:text-[#3B82F6] transition-colors"
                 >
                   <div className="p-3 bg-[#3B82F6]/10 rounded-lg">
                     <Mail className="w-5 h-5 text-[#3B82F6]" />
                   </div>
-                  <span>hola@landingspro.es</span>
+                  <span>davidmorras2@gmail.com</span>
                 </a>
                 <a
-                  href="tel:+34600000000"
+                  href="tel:+34680210456"
                   className="flex items-center gap-4 text-[#9CA3AF] hover:text-[#3B82F6] transition-colors"
                 >
                   <div className="p-3 bg-[#3B82F6]/10 rounded-lg">
                     <Phone className="w-5 h-5 text-[#3B82F6]" />
                   </div>
-                  <span>+34 600 000 000</span>
+                  <span>+34 680210456</span>
                 </a>
               </div>
             </div>

@@ -3,7 +3,7 @@
 import { forwardRef } from "react"
 import Image from "next/image"
 
-type Section = "inicio" | "planes" | "mantenimiento" | "resenas" | "portafolio" | "contacto"
+type Section = "inicio" | "planes" | "mantenimiento" | "resenas" | "portfolio" | "contacto"
 
 interface HeroSectionProps {
   onNavigate: (section: Section) => void
