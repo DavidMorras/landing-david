@@ -54,17 +54,34 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!validateForm()) return
 
     setIsSubmitting(true)
-    
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (!result.success) {
+        throw new Error("Error al enviar el mensaje")
+      }
+
+      setIsSubmitted(true)
+      setFormData({ name: "", email: "", phone: "", message: "" })
+    } catch (error) {
+      console.error(error)
+      alert("Hubo un problema al enviar el mensaje. Inténtalo más tarde.")
+    }
+
     setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ name: "", email: "", phone: "", message: "" })
   }
 
   const handleChange = (
