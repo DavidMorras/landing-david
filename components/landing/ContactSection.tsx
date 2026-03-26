@@ -74,6 +74,9 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
         throw new Error("Error al enviar el mensaje")
       }
 
+      // Marca la política como aceptada al enviar
+      localStorage.setItem("privacyAccepted", "true")
+
       setIsSubmitted(true)
       setFormData({ name: "", email: "", phone: "", message: "" })
     } catch (error) {
@@ -256,6 +259,20 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
                       </>
                     )}
                   </button>
+
+                  {/* Texto legal */}
+                  <p className="text-xs text-[#9CA3AF] mt-3">
+                    Al enviar un mensaje aceptas nuestra{" "}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        window.dispatchEvent(new Event("openPrivacyBanner"))
+                      }
+                      className="underline text-[#3B82F6] hover:text-[#60A5FA] transition"
+                    >
+                      Política de Privacidad
+                    </button>.
+                  </p>
                 </div>
               </form>
             )}
@@ -270,7 +287,7 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
               </h3>
               <div className="space-y-4">
                 <a
-                  href="davidmorras2@gmail.com"
+                  href="mailto:davidmorras2@gmail.com"
                   className="flex items-center gap-4 text-[#9CA3AF] hover:text-[#3B82F6] transition-colors"
                 >
                   <div className="p-3 bg-[#3B82F6]/10 rounded-lg">
