@@ -14,7 +14,7 @@ const projects = [
     results: [
       { icon: TrendingUp, label: "Interés generado", value: "+40%" },
       { icon: Users, label: "Nuevas consultas", value: "+25/mes" },
-      { icon: Clock, label: "Tiempo de carga", value: "0.7s" },
+      { icon: Clock, label: "Tiempo de carga", value: "0.9s" },
     ],
     tags: ["Formación", "Web Profesional", "Responsive"],
   },
