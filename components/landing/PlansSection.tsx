@@ -3,7 +3,7 @@
 import { forwardRef } from "react"
 import { Check } from "lucide-react"
 
-type Section = "inicio" | "planes" | "mantenimiento" | "resenas" | "portafolio" | "contacto"
+type Section = "inicio" | "planes" | "mantenimiento" | "resenas" | "portfolio" | "contacto"
 
 interface PlansSectionProps {
   onNavigate: (section: Section) => void

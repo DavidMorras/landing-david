@@ -6,11 +6,13 @@ import { X } from "lucide-react"
 export default function PrivacyBanner() {
   const [visible, setVisible] = useState(false)
 
-  useEffect(() => {
-    const accepted = localStorage.getItem("privacyAccepted")
-    if (!accepted) {
-      setVisible(true)
-    }
+    useEffect(() => {
+        const openBanner = () => setVisible(true)
+         window.addEventListener("openPrivacyBanner", openBanner)
+
+         return () => window.removeEventListener("openPrivacyBanner", openBanner)
+    }, [])
+
 
     const handleScroll = () => {
       if (!localStorage.getItem("privacyAccepted")) {
