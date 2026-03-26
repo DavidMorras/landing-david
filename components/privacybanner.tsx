@@ -6,25 +6,23 @@ import { X } from "lucide-react"
 export default function PrivacyBanner() {
   const [visible, setVisible] = useState(false)
 
-    useEffect(() => {
-        const openBanner = () => setVisible(true)
-         window.addEventListener("openPrivacyBanner", openBanner)
-
-         return () => window.removeEventListener("openPrivacyBanner", openBanner)
-    }, [])
-
-
-    const handleScroll = () => {
-      if (!localStorage.getItem("privacyAccepted")) {
-        localStorage.setItem("privacyAccepted", "true")
-        setVisible(false)
-      }
+  // Mostrar el banner si no se ha aceptado antes
+  useEffect(() => {
+    const accepted = localStorage.getItem("privacyAccepted")
+    if (!accepted) {
+      setVisible(true)
     }
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    // Permitir abrirlo desde el footer
+    const openBanner = () => setVisible(true)
+    window.addEventListener("openPrivacyBanner", openBanner)
+
+    return () => {
+      window.removeEventListener("openPrivacyBanner", openBanner)
+    }
   }, [])
 
+  // Aceptar banner
   const accept = () => {
     localStorage.setItem("privacyAccepted", "true")
     setVisible(false)
