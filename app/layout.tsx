@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+import PrivacyBanner from "@/components/privacybanner"
+
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -49,6 +51,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased bg-[#0B0F14] text-[#E5E7EB]`}>
         {children}
         <Analytics />
+        <PrivacyBanner />
       </body>
     </html>
   )
