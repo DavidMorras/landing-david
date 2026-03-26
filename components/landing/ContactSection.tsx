@@ -10,12 +10,14 @@ interface FormData {
   email: string
   phone: string
   message: string
+  privacyAccepted: boolean
 }
 
 interface FormErrors {
   name?: string
   email?: string
   message?: string
+  privacyAccepted?: string
 }
 
 const ContactSection = forwardRef<HTMLElement>((_, ref) => {
@@ -24,7 +26,9 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
     email: "",
     phone: "",
     message: "",
+    privacyAccepted: false,
   })
+
   const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -48,6 +52,10 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
       newErrors.message = "El mensaje es obligatorio"
     }
 
+    if (!formData.privacyAccepted) {
+      newErrors.privacyAccepted = "Debes aceptar la Política de Privacidad"
+    }
+
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }, [formData])
@@ -65,7 +73,10 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          privacyAccepted: true, // se envía al backend
+        }),
       })
 
       const result = await response.json()
@@ -74,11 +85,17 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
         throw new Error("Error al enviar el mensaje")
       }
 
-      // Marca la política como aceptada al enviar
+      // Guardamos aceptación en localStorage
       localStorage.setItem("privacyAccepted", "true")
 
       setIsSubmitted(true)
-      setFormData({ name: "", email: "", phone: "", message: "" })
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+        privacyAccepted: false,
+      })
     } catch (error) {
       console.error(error)
       alert("Hubo un problema al enviar el mensaje. Inténtalo más tarde.")
@@ -90,20 +107,22 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+    const { name, value, type, checked } = e.target as any
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }))
+
     if (errors[name as keyof FormErrors]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }))
     }
   }
 
   return (
-    <section
-      ref={ref}
-      id="contacto"
-      className="py-20 lg:py-32 relative"
-    >
+    <section ref={ref} id="contacto" className="py-20 lg:py-32 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#E5E7EB] text-balance">
@@ -115,6 +134,7 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+
           {/* Form */}
           <div className="bg-[#111827] rounded-2xl p-8 border border-[#1F2937]">
             {isSubmitted ? (
@@ -125,9 +145,7 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
                 <h3 className="text-xl font-bold text-[#E5E7EB] mb-2">
                   ¡Mensaje enviado!
                 </h3>
-                <p className="text-[#9CA3AF]">
-                  Te responderemos lo antes posible.
-                </p>
+                <p className="text-[#9CA3AF]">Te responderemos lo antes posible.</p>
                 <button
                   onClick={() => setIsSubmitted(false)}
                   className="mt-6 text-[#3B82F6] hover:text-[#60A5FA] transition-colors"
@@ -138,12 +156,10 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
             ) : (
               <form onSubmit={handleSubmit} noValidate>
                 <div className="space-y-6">
+
                   {/* Name */}
                   <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-[#E5E7EB] mb-2"
-                    >
+                    <label htmlFor="name" className="block text-sm font-medium text-[#E5E7EB] mb-2">
                       Nombre <span className="text-[#EF4444]">*</span>
                     </label>
                     <input
@@ -160,18 +176,13 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
                       placeholder="Tu nombre"
                     />
                     {errors.name && (
-                      <p id="name-error" className="mt-1 text-sm text-[#EF4444]">
-                        {errors.name}
-                      </p>
+                      <p id="name-error" className="mt-1 text-sm text-[#EF4444]">{errors.name}</p>
                     )}
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-[#E5E7EB] mb-2"
-                    >
+                    <label htmlFor="email" className="block text-sm font-medium text-[#E5E7EB] mb-2">
                       Email <span className="text-[#EF4444]">*</span>
                     </label>
                     <input
@@ -188,18 +199,13 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
                       placeholder="tu@email.com"
                     />
                     {errors.email && (
-                      <p id="email-error" className="mt-1 text-sm text-[#EF4444]">
-                        {errors.email}
-                      </p>
+                      <p id="email-error" className="mt-1 text-sm text-[#EF4444]">{errors.email}</p>
                     )}
                   </div>
 
                   {/* Phone */}
                   <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-[#E5E7EB] mb-2"
-                    >
+                    <label htmlFor="phone" className="block text-sm font-medium text-[#E5E7EB] mb-2">
                       Teléfono <span className="text-[#9CA3AF]">(opcional)</span>
                     </label>
                     <input
@@ -215,10 +221,7 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
 
                   {/* Message */}
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-[#E5E7EB] mb-2"
-                    >
+                    <label htmlFor="message" className="block text-sm font-medium text-[#E5E7EB] mb-2">
                       Mensaje <span className="text-[#EF4444]">*</span>
                     </label>
                     <textarea
@@ -235,11 +238,36 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
                       placeholder="Cuéntanos sobre tu proyecto..."
                     />
                     {errors.message && (
-                      <p id="message-error" className="mt-1 text-sm text-[#EF4444]">
-                        {errors.message}
-                      </p>
+                      <p id="message-error" className="mt-1 text-sm text-[#EF4444]">{errors.message}</p>
                     )}
                   </div>
+
+                  {/* Checkbox RGPD */}
+                  <div className="flex items-start gap-2">
+                    <input
+                      type="checkbox"
+                      id="privacy"
+                      name="privacyAccepted"
+                      checked={formData.privacyAccepted}
+                      onChange={handleChange}
+                      className="mt-1 h-4 w-4 rounded border-[#1F2937] bg-[#0B0F14] text-[#3B82F6] focus:ring-[#3B82F6]"
+                    />
+
+                    <label htmlFor="privacy" className="text-xs text-[#9CA3AF] leading-relaxed">
+                      Acepto la{" "}
+                      <button
+                        type="button"
+                        onClick={() => window.dispatchEvent(new Event("openPrivacyBanner"))}
+                        className="underline text-[#3B82F6] hover:text-[#60A5FA] transition"
+                      >
+                        Política de Privacidad
+                      </button>.
+                    </label>
+                  </div>
+
+                  {errors.privacyAccepted && (
+                    <p className="text-sm text-[#EF4444]">{errors.privacyAccepted}</p>
+                  )}
 
                   {/* Submit Button */}
                   <button
@@ -259,20 +287,6 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
                       </>
                     )}
                   </button>
-
-                  {/* Texto legal */}
-                  <p className="text-xs text-[#9CA3AF] mt-3">
-                    Al enviar un mensaje aceptas nuestra{" "}
-                    <button
-                      type="button"
-                      onClick={() =>
-                        window.dispatchEvent(new Event("openPrivacyBanner"))
-                      }
-                      className="underline text-[#3B82F6] hover:text-[#60A5FA] transition"
-                    >
-                      Política de Privacidad
-                    </button>.
-                  </p>
                 </div>
               </form>
             )}
@@ -280,11 +294,8 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
 
           {/* Contact Info & Payment Methods */}
           <div className="space-y-8">
-            {/* Contact Info */}
             <div className="bg-[#111827] rounded-2xl p-8 border border-[#1F2937]">
-              <h3 className="text-xl font-bold text-[#E5E7EB] mb-6">
-                Información de contacto
-              </h3>
+              <h3 className="text-xl font-bold text-[#E5E7EB] mb-6">Información de contacto</h3>
               <div className="space-y-4">
                 <a
                   href="mailto:davidmorras2@gmail.com"
@@ -295,6 +306,7 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
                   </div>
                   <span>davidmorras2@gmail.com</span>
                 </a>
+
                 <a
                   href="tel:+34680210456"
                   className="flex items-center gap-4 text-[#9CA3AF] hover:text-[#3B82F6] transition-colors"
@@ -307,26 +319,19 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
               </div>
             </div>
 
-            {/* Payment Methods */}
             <div className="bg-[#111827] rounded-2xl p-8 border border-[#1F2937]">
-              <h3 className="text-xl font-bold text-[#E5E7EB] mb-6">
-                Métodos de pago
-              </h3>
+              <h3 className="text-xl font-bold text-[#E5E7EB] mb-6">Métodos de pago</h3>
               <p className="text-[#9CA3AF] mb-6 text-sm">
                 Aceptamos diferentes métodos de pago para tu comodidad.
               </p>
+
               <div className="grid grid-cols-2 gap-4">
-                <div
-                  className="flex items-center justify-center gap-3 p-4 bg-[#0B0F14] border border-[#1F2937] rounded-xl hover:border-[#3B82F6] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
-                  aria-label="Pagar con Bizum"
-                >
+                <div className="flex items-center justify-center gap-3 p-4 bg-[#0B0F14] border border-[#1F2937] rounded-xl hover:border-[#3B82F6] transition-colors">
                   <Smartphone className="w-6 h-6 text-[#3B82F6]" />
                   <span className="text-[#E5E7EB] font-medium">Bizum</span>
                 </div>
-                <div
-                  className="flex items-center justify-center gap-3 p-4 bg-[#0B0F14] border border-[#1F2937] rounded-xl hover:border-[#3B82F6] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
-                  aria-label="Pagar con PayPal"
-                >
+
+                <div className="flex items-center justify-center gap-3 p-4 bg-[#0B0F14] border border-[#1F2937] rounded-xl hover:border-[#3B82F6] transition-colors">
                   <CreditCard className="w-6 h-6 text-[#3B82F6]" />
                   <span className="text-[#E5E7EB] font-medium">PayPal</span>
                 </div>
