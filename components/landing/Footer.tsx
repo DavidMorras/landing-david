@@ -83,12 +83,20 @@ export default function Footer({ onNavigate }: FooterProps) {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-[#1F2937] text-center">
-          <p className="text-[#9CA3AF] text-sm">
-            © {new Date().getFullYear()} LandingsPro. Todos los derechos reservados.
-          </p>
-        </div>
-      </div>
-    </footer>
-  )
-}
+        <div className="text-center text-sm text-[#9CA3AF]">
+         <button
+            onClick={() => window.dispatchEvent(new Event("openPrivacyBanner"))}
+            className="underline hover:text-[#3B82F6] transition"
+         >
+          Política de Privacidad
+        </button>
+
+       {" "} | {" "}
+
+       <button
+        onClick={() => window.dispatchEvent(new Event("openPrivacyBanner"))}
+        className="underline hover:text-[#3B82F6] transition"
+       >
+        Aviso Legal
+      </button>
+    </div>
