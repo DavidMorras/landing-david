@@ -8,9 +8,7 @@ export default function PrivacyBanner() {
   const [view, setView] = useState<"default" | "privacidad" | "aviso">("default")
 
   useEffect(() => {
-    const accepted = localStorage.getItem("privacyAccepted")
-    if (!accepted) setVisible(true)
-
+    // Solo se abre cuando el footer lo pide
     const openBanner = () => {
       setView("default")
       setVisible(true)
@@ -28,18 +26,16 @@ export default function PrivacyBanner() {
   if (!visible) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-[#111827] border-t border-[#1F2937] p-6 z-50">
-      <div className="max-w-4xl mx-auto flex flex-col gap-4">
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+      <div className="bg-[#111827] border border-[#1F2937] rounded-xl p-6 max-w-lg w-full relative shadow-xl">
 
-        {/* Cerrar */}
-        <div className="flex justify-end">
-          <button
-            onClick={() => setVisible(false)}
-            className="p-2 text-[#9CA3AF] hover:text-white transition"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
+        {/* Botón cerrar */}
+        <button
+          onClick={() => setVisible(false)}
+          className="absolute top-3 right-3 text-[#9CA3AF] hover:text-white transition"
+        >
+          <X className="w-5 h-5" />
+        </button>
 
         {/* CONTENIDO */}
         {view === "default" && (
@@ -96,7 +92,7 @@ export default function PrivacyBanner() {
         )}
 
         {/* BOTÓN ACEPTAR */}
-        <div className="flex justify-end">
+        <div className="flex justify-end mt-4">
           <button
             onClick={accept}
             className="px-4 py-2 bg-[#3B82F6] text-white rounded-lg text-sm hover:bg-[#60A5FA] transition"
