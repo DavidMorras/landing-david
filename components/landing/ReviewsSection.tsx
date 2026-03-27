@@ -32,7 +32,7 @@ const ReviewsSection = forwardRef<HTMLElement>((_, ref) => {
             Lo que dicen nuestros <span className="text-[#3B82F6]">clientes</span>
           </h2>
           <p className="mt-4 text-lg text-[#9CA3AF] max-w-2xl mx-auto text-pretty">
-            Más de 50 clínicas y PYMES confían en nosotros para su presencia digital.
+           {/*texto + de x clinicas ya confian en nosotros*/}
           </p>
         </div>
 
