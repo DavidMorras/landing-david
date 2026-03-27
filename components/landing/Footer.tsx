@@ -73,12 +73,6 @@ export default function Footer({ onNavigate }: FooterProps) {
               >
                 davidmorras2@gmail.com
               </a>
-              <a
-                href="tel:+34680210456"
-                className="block text-[#9CA3AF] hover:text-[#3B82F6] transition-colors"
-              >
-                +34 680210456
-              </a>
             </div>
           </div>
         </div>

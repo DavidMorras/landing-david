@@ -11,7 +11,7 @@ const reviews = [
     role: "Instructor de Seguridad",
     image: "/reviews/fotojorgereseña.png",
     rating: 5,
-    text: "El me hizo la mejor web que hubiera imaginado, además ¡tiene un padre guapo!",
+    text: "Es fácil dialogar con él, supo rápidamente lo que estaba buscando para mi web.",
   },
 ]
 
