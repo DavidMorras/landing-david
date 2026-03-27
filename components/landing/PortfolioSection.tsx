@@ -12,7 +12,7 @@ const projects = [
       "Web profesional para un instructor independiente especializado en formación de seguridad. Diseñada para transmitir confianza, experiencia y claridad en los servicios que ofrece.",
     image: "/porfoliousandowebseguridad.png", // Aquí pondrás tu mockup cuando lo generes
     results: [
-      { icon: TrendingUp, label: "Interés generado", value: "+40%" },
+      { icon: TrendingUp, label: "Nuevos alumnos", value: "+40%" },
       { icon: Users, label: "Nuevas consultas", value: "+25/mes" },
       { icon: Clock, label: "Tiempo de carga", value: "0.9s" },
     ],
