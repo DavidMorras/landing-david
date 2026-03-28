@@ -41,7 +41,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <div className="w-8 h-8 bg-[#3B82F6] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">L</span>
               </div>
-              <span className="text-[#E5E7EB] font-semibold text-lg">LandingsPro</span>
+              <span className="text-[#E5E7EB] font-semibold text-lg">David Landing Studio</span>
             </button>
 
             <p className="mt-4 text-[#9CA3AF] text-sm leading-relaxed">
@@ -84,7 +84,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Línea personalizada */}
           <p className="text-[#9CA3AF] text-sm">
-            © 2026 <span className="font-semibold text-[#E5E7EB]">LandingsPro</span> — Diseñado por David Morrás
+            © 2026 <span className="font-semibold text-[#E5E7EB]">David Landing Studio</span> — Diseñado por David Morrás
           </p>
 
           {/* Botones legales */}
