@@ -39,7 +39,7 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
                 onClick={() => onNavigate("contacto")}
-                className="px-10 py-5 text lg bg-[#3B82F6] text-white font-semibold rounded-lg hover:bg-[#60A5FA] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0F14]"
+                className="px-12 py-6 text-xl bg-[#3B82F6] text-white font-bold rounded-xl shadow-lg hover:bg-[#60A5FA] transition-all duration-200"
               >
                 Quiero mi Web
               </button>
