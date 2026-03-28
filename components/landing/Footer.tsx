@@ -29,6 +29,7 @@ export default function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-[#111827] border-t border-[#1F2937]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
         <div className="grid md:grid-cols-3 gap-8">
           
           {/* Brand */}
@@ -42,6 +43,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               </div>
               <span className="text-[#E5E7EB] font-semibold text-lg">LandingsPro</span>
             </button>
+
             <p className="mt-4 text-[#9CA3AF] text-sm leading-relaxed">
               Te ayudamos a transformar visitas en clientes con una landing profesional hecha a medida.
             </p>
@@ -78,7 +80,14 @@ export default function Footer({ onNavigate }: FooterProps) {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-[#1F2937] text-center">
+        <div className="mt-12 pt-8 border-t border-[#1F2937] text-center space-y-4">
+
+          {/* Línea personalizada */}
+          <p className="text-[#9CA3AF] text-sm">
+            © 2026 <span className="font-semibold text-[#E5E7EB]">LandingsPro</span> — Diseñado por David Morrás
+          </p>
+
+          {/* Botones legales */}
           <p className="text-[#9CA3AF] text-sm flex items-center justify-center gap-2">
             <button
               onClick={() => window.dispatchEvent(new Event("openPrivacyBanner"))}
