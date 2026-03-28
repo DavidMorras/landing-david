@@ -60,7 +60,7 @@ export default function Header({ activeTab, onNavigate }: HeaderProps) {
             className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] rounded-lg"
           >
             <div className="w-8 h-8 bg-[#3B82F6] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">L</span>
+              <span className="text-white font-bold text-lg">DL</span>
             </div>
             <span className="text-[#E5E7EB] font-semibold text-lg hidden sm:block">
               David Landing Studio
