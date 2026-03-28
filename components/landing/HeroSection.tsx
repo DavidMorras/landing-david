@@ -25,10 +25,11 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onNavigate }, r
           {/* Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#E5E7EB] leading-tight text-balance">
-              Landings profesionales que{" "}
-              <span className="text-[#3B82F6]">convierten</span>{" "}
-              visitas en{" "}
+              Landings profesionales para{" "}
+              <span className="text-[#3B82F6]">negocios</span>{" "}
+              que quieren{" "}
               <span className="text-[#3B82F6]">clientes</span>{" "} 
+              y no visistas{" "}
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-[#9CA3AF] leading-relaxed max-w-xl mx-auto lg:mx-0 text-pretty">
