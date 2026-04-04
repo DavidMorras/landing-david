@@ -5,12 +5,8 @@ import { Menu, X } from "lucide-react"
 
 type Section =
   | "inicio"
-  | "porquetrabajarconmigo"
-  | "proceso"  
   | "planes"
   | "mantenimiento"
-  | "resenas"
-  | "portfolio"
   | "contacto"
 
 interface HeaderProps {
@@ -20,12 +16,8 @@ interface HeaderProps {
 
 const navItems: { id: Section; label: string }[] = [
   { id: "inicio", label: "Inicio" },
-  { id: "porquetrabajarconmigo", label: "Por qué yo" },
-  { id: "proceso", label: "Proceso" },   
   { id: "planes", label: "Planes" },
   { id: "mantenimiento", label: "Mantenimiento" },
-  { id: "resenas", label: "Reseñas" },
-  { id: "portfolio", label: "Portfolio" },
   { id: "contacto", label: "Contacto" },
 ]
 
@@ -54,6 +46,7 @@ export default function Header({ activeTab, onNavigate }: HeaderProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
+          
           {/* Logo */}
           <button
             onClick={() => handleNavClick("inicio")}
