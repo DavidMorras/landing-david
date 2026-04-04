@@ -283,7 +283,7 @@ const ContactSection = forwardRef<HTMLElement>((_, ref) => {
                     ) : (
                       <>
                         <Send className="w-5 h-5" />
-                        Enviar mensaje
+                        Contactar
                       </>
                     )}
                   </button>
