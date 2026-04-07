@@ -56,7 +56,7 @@ export default function Header({ activeTab, onNavigate }: HeaderProps) {
               <span className="text-white font-bold text-lg">DL</span>
             </div>
             <span className="text-[#E5E7EB] font-semibold text-lg hidden sm:block">
-              David Landing Studio
+              David Landing Stludio
             </span>
           </button>
 
